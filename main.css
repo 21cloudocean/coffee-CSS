@@ -65,11 +65,13 @@ body {
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: 0.75rem;
+  animation: slideFromTop ease-in-out 3s 1;
 }
 .hero-center p {
   max-width: 35em;
   margin: 0 auto;
   margin-bottom: 1.5rem;
+  animation: slideFromTop ease-in-out 3s 1;
 }
 .hero-btn {
   background: transparent;
@@ -78,9 +80,32 @@ body {
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 2px;
+  animation: slideFromBottom ease-in-out 3s 1;
 }
 .content {
   width: 100vw;
   height: 100vh;
   background-color: yellowgreen;
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
